@@ -1,25 +1,41 @@
-body, html {
-    height: 100%;
-  }
-  
-  .bg { 
+  .bg-main { 
     /* The image used */
     background-image: url("/Images/homepage.png");
   
     /* Full height */
-    height: 100%; 
+    height: 100vh;
+    overflow-x: hidden; 
   
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-
+  .bg-photo { 
+    /* The image used */
+    background-image: url("/Images/photo.png");
+  
+    /* Full height */
+    height: 100vh;
+    overflow-x: hidden; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 .navbar{
   color: black;
 }
 
 .maintext{
   font-family: montserrat;
-  color: gray;
+  color: black;
+}
+
+.maintext-photo{
+  font-family: montserrat;
+  color: black;
+  font-size: 30pt;
+  text-align: center;
 }
