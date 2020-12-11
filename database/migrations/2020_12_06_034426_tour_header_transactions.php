@@ -20,7 +20,7 @@ class TourHeaderTransactions extends Migration
             $table->date('book_date');
             $table->date('start_date');
             $table->date('end_date');
-            $table->foreign('customer_id')->references('customer_id')->on('customer');
+            $table->foreign('customer_id')->references('id')->on('users');
             $table->foreign('tour_id')->references('tour_id')->on('tour');
         });
     }

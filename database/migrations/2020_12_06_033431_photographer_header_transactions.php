@@ -19,7 +19,7 @@ class PhotographerHeaderTransactions extends Migration
             $table->unsignedInteger('photographer_id');
             $table->date('book_date');
             $table->date('work_date');
-            $table->foreign('customer_id')->references('customer_id')->on('customer');
+            $table->foreign('customer_id')->references('id')->on('users');
             $table->foreign('photographer_id')->references('photographer_id')->on('photographer');
         });
     }

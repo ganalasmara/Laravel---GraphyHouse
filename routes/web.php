@@ -24,3 +24,7 @@ Route::get('/detailPhotographer/{id}', 'viewDetailPhotographerController@getDeta
 Route::get('/ourTours', 'viewTourController@getAllTour')->name('viewTour');
 
 Route::get('/ourTours/{id}', 'viewTourDetailController@getTourDetail')->name('viewTourDetail');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
