@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/ourPhotographers', 'viewPhotographerController@getAllPhotographerList');
 
 Route::get('/detailPhotographer/{id}', 'viewDetailPhotographerController@getDetailPhotographer');
+
+Route::get('/ourTours', 'viewTourController@getAllTour')->name('viewTour');
+
+Route::get('/ourTours/{id}', 'viewTourDetailController@getTourDetail')->name('viewTourDetail');
