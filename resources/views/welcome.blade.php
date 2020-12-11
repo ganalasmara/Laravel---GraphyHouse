@@ -32,7 +32,7 @@
               <a class="nav-link" href="ourPhotographers">Find a Photographer</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tour List</a>
+              <a class="nav-link" href="{{ Route('viewTour') }}">Tour List</a>
             </li>
             <li class="n  av-item">
               <a class="nav-link" href="#">Login</a>
