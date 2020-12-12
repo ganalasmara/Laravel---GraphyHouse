@@ -12,14 +12,19 @@
     <a href="{{ Route('viewTour') }}">Tour list</a>
     <a href="">Login</a>
     <a href="">Register</a>
-    <img src="{{$data->photographer_image}}">
+    <br>
+    <img src="{{$data->photographer_image}}" style="width:300px; height:250px;">
     <p>{{$data->name}}</p>
     <p>{{$data->description}}</p>
     <p>Starts from</p>
     <p>{{$data->book_price}}</p>
-    <a href="{{ route('checkout',$data->photographer_id) }}">Book a Date</a>
+    @if (Auth::check())
+        <a href="{{ route('checkout',$data->photographer_id) }}">Book a Date</a>
+        <br>
+    @endif
     @foreach($imgList as $img)
-        <img src="{{$img->photo}}" alt="">
+        <img src="{{$img->photo}}" alt="" style="width:300px; height:250px;">
+        <br>
     @endforeach
 </body>
 </html>

@@ -60,7 +60,9 @@
                         <div>
                             <p class="tour-detail-price">
                                 <b>Starts from Rp.{{ $detail->price }}/pax</b><br><br>
+                                @if (Auth::check())
                                 <a href="{{ route('tourcheckout', $detail->tour_id)}}" class="btn btn-primary">Book a Date!</a>
+                                @endif
                             </p>
                         </div>
                     </div>

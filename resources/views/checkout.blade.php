@@ -12,7 +12,8 @@
     <a href="{{ Route('viewTour') }}">Tour list</a>
     <a href="{{ route('login') }}">Login</a>
     <a href="{{ route('register') }}">Register</a>
-    <img src="{{$photographer->photographer_image}}">
+    <br>
+    <img src="{{$photographer->photographer_image}}" style="width:300px; height:250px;">
     <p>{{$photographer->name}}</p>
     <p>{{$photographer->description}}</p>
     <p>Starts from</p>

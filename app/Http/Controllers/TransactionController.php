@@ -32,7 +32,7 @@ class TransactionController extends Controller
         $ptransaction->work_date = $request['workdate'];
         PhotographerTransaction::create($ptransaction->toArray());
    
-        return redirect('/');
+        return redirect('/')->with('success','Photographer Booked Successfully!');;
     }
 
     public function tourcheckout($id)
@@ -65,7 +65,7 @@ class TransactionController extends Controller
 
         TourDetailTransaction::create($tourdtransaction->toArray());
    
-        return redirect('/');
+        return redirect('/')->with('success','Tour Booked Successfully!');;
     }
 
 }

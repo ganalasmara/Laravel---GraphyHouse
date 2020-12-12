@@ -50,6 +50,12 @@
     <div class="row align-items-center h-100">
       <div class="container">
         <div class="col mt-5">
+        @if (session()->has('success'))
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                    <strong>{{ session('success') }}</strong>
+            </div>
+        @endif
           <p class="maintext text-center" style="font-size: 70pt;">Graphy House</p>
           <p class="maintext text-center" style="font-size: 30pt;">フォトグラフィー</p>
           <div class="text-center mt-5">
