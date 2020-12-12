@@ -16,6 +16,7 @@ class tourSeeder extends Seeder
                 'tour_id'=>1,
                 'name'=>'Bali Tours',
                 'price'=>1000000,
+                'days'=>5,
                 'tour_image'=>'\Images\bali.jpg',
                 'description'=>'Nikmati perjalanan berkeliling bali dan jelajahi tempat-tampat wisata di bali. Pesan sekarang!',
                 'tour_status'=>'active'
@@ -24,6 +25,7 @@ class tourSeeder extends Seeder
                 'tour_id'=>2,
                 'name'=>'Surabaya Tours',
                 'price'=>200000,
+                'days'=>2,
                 'tour_image'=>'\Images\surabaya.jpg',
                 'description'=>'Nikmati perjalanan berkeliling surabaya dan jelajahi tempat-tampat wisata di surabaya. Pesan sekarang!',
                 'tour_status'=>'active'
@@ -32,6 +34,7 @@ class tourSeeder extends Seeder
                 'tour_id'=>3,
                 'name'=>'Jogja Tours',
                 'price'=>300000,
+                'days'=>3,
                 'tour_image'=>'\Images\jogja.jpg',
                 'description'=>'Nikmati perjalanan berkeliling jogja dan jelajahi tempat-tampat wisata di jogja. Pesan sekarang!',
                 'tour_status'=>'active'

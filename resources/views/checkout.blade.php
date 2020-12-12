@@ -20,7 +20,7 @@
     <form method="POST" action="">
     @csrf
         <span>Work Date: </span>
-        <input type="date" id="workdate" name="workdate" class="@error('workdate') is-invalid @enderror" value="{{old('workdate')}}">
+        <input type="date" id="workdate" name="workdate" class="@error('workdate') is-invalid @enderror" required value="{{old('workdate')}}">
         @error('workdate')
         <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>

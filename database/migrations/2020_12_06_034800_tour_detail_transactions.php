@@ -17,6 +17,8 @@ class TourDetailTransactions extends Migration
             $table->increments('tdt_id');
             $table->unsignedInteger('tht_id');
             $table->integer('total_price');
+            $table->timestamps();
+            
             $table->foreign('tht_id')->references('tht_id')->on('tourHeaderTransaction');
         });
     }

@@ -17,6 +17,7 @@ class Tours extends Migration
             $table->increments('tour_id');
             $table->string('name');
             $table->integer('price');
+            $table->integer('days');
             $table->string('tour_image');
             $table->string('description');
             $table->string('tour_status');

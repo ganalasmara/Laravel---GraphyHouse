@@ -52,15 +52,18 @@ class TransactionController extends Controller
         $tourtransaction->tour_id = $id;
         $tourtransaction->book_date = $current;
         $tourtransaction->start_date = $request['startdate'];
-        $tourtransaction->end_date = $request['enddate'];
-        PhotographerTransaction::create($tourtransaction->toArray());
+
+        TourHeaderTransaction::create($tourtransaction->toArray());
 
         $tourdtransaction = new TourDetailTransaction();
 
         $headerid = TourHeaderTransaction::orderby('tht_id', 'desc')->first();
+        $tour = Tour::where('tour_id', 'like', $id)->first();
 
-        $tourdtransaction->tht_id = $headerid;
-        // $tourdtransaction->total_price = ;
+        $tourdtransaction->tht_id = $headerid->tht_id;
+        $tourdtransaction->total_price = $tour->price;
+
+        TourDetailTransaction::create($tourdtransaction->toArray());
    
         return redirect('/');
     }

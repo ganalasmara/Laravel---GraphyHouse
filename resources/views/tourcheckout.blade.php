@@ -22,16 +22,8 @@
     <form method="POST" action="">
     @csrf
         <span>Start Date: </span>
-        <input type="date" id="startdate" name="startdate" class="@error('startdate') is-invalid @enderror" value="{{old('startdate')}}">
+        <input type="date" id="startdate" name="startdate" class="@error('startdate') is-invalid @enderror" required value="{{old('startdate')}}">
         @error('startdate')
-        <span class="invalid-feedback" role="alert">
-            <strong>{{ $message }}</strong>
-        </span>
-        @enderror
-
-        <span>End Date: </span>
-        <input type="date" id="enddate" name="enddate" class="@error('enddate') is-invalid @enderror" value="{{old('enddate')}}">
-        @error('enddate')
         <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
         </span>

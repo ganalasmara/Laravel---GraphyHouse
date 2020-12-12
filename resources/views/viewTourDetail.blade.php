@@ -52,12 +52,13 @@
                     </div>
                     <div class="tour-detail-sec1">
                         <div class="tour-detail-desc">
-                            {{$detail->description}}
+                            {{$detail->description}} <br>
+                            Lama tour:{{$detail->days}} hari
                         </div>
                         <div>
                             <p class="tour-detail-price">
                                 <b>Starts from Rp.{{ $detail->price }}/pax</b><br><br>
-                                <a href="#" class="btn btn-primary">Book a Date!</a>
+                                <a href="{{ route('tourcheckout', $detail->tour_id)}}" class="btn btn-primary">Book a Date!</a>
                             </p>
                         </div>
                     </div>

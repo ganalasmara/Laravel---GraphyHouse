@@ -19,7 +19,8 @@ class TourHeaderTransactions extends Migration
             $table->unsignedInteger('tour_id');
             $table->date('book_date');
             $table->date('start_date');
-            $table->date('end_date');
+            $table->timestamps();
+
             $table->foreign('customer_id')->references('id')->on('users');
             $table->foreign('tour_id')->references('tour_id')->on('tour');
         });

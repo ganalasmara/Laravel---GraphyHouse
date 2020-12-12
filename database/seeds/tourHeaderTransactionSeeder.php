@@ -19,7 +19,6 @@ class tourHeaderTransactionSeeder extends Seeder
                 'tour_id'=>3,
                 'book_date'=> Carbon::now()->format('Y-m-d H:i:s'),
                 'start_date'=> Carbon::now()->format('Y-m-d H:i:s'),
-                'end_date'=> Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'tht_id'=>2,
@@ -27,7 +26,6 @@ class tourHeaderTransactionSeeder extends Seeder
                 'tour_id'=>2,
                 'book_date'=> Carbon::now()->format('Y-m-d H:i:s'),
                 'start_date'=> Carbon::now()->format('Y-m-d H:i:s'),
-                'end_date'=> Carbon::now()->format('Y-m-d H:i:s'),
             ],
         ]);
     }

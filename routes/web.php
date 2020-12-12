@@ -29,6 +29,7 @@ Route::get('/checkout/{id}', 'TransactionController@checkout')->name('checkout')
 Route::post('/checkout/{id}', 'TransactionController@store')->name('addcheckout');
 
 Route::get('/tourcheckout/{id}', 'TransactionController@tourcheckout')->name('tourcheckout');
+Route::post('/tourcheckout/{id}', 'TransactionController@tourstore')->name('addtourcheckout');
 
 Auth::routes();
 
