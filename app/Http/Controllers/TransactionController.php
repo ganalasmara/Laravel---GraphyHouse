@@ -60,7 +60,7 @@ class TransactionController extends Controller
         $headerid = TourHeaderTransaction::orderby('tht_id', 'desc')->first();
 
         $tourdtransaction->tht_id = $headerid;
-        $tourdtransaction->total_price = ;
+        // $tourdtransaction->total_price = ;
    
         return redirect('/');
     }
