@@ -84,8 +84,31 @@
 
 .tour-detail-price{
   text-align: center;
+  margin-top: 30px;
 }
 
-.tour-detail-sec1{
-  margin-left: 240px;
+.bg-auth { 
+  /* The image used */
+  background-image: url("/Images/photo.png");
+
+  /* Full height */
+  height: 100vh;
+  overflow-x: hidden; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content-auth{
+  margin-top: 100px;
+}
+
+.auth-title{
+  text-align: center;
+  font-family: montserrat;
+  color: black;
+  font-size: 30pt;
+  text-align: center;
 }

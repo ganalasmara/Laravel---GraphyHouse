@@ -47,25 +47,25 @@
                 @foreach($details as $detail)
                 <div class="col-md-12">
                     <h1 class="tour-detail-title"><b>{{ $detail->name }}</b></h1>
-                </div>
                     <div>
                         <img src="{{$detail->tour_image}}" class="img-tour-detail" >
                     </div>
                     <div class="tour-detail-sec1">
                         <div class="tour-detail-desc">
-                                {{$detail->description}}
+                            {{$detail->description}}
                         </div>
                         <div>
                             <p class="tour-detail-price">
-                                Starts from Rp.{{ $detail->price }}/pax <br>
-                                <a href="#">Book a Date!</a>
+                                <b>Starts from Rp.{{ $detail->price }}/pax</b><br><br>
+                                <a href="#" class="btn btn-primary">Book a Date!</a>
                             </p>
                         </div>
                     </div>
                     <br>
-                @endforeach
+                    @endforeach
+                </div>
+                </div>
             </div>
         </div>
-</div>
 </body>
 </html>
