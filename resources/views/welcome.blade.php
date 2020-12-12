@@ -53,7 +53,7 @@
           <p class="maintext text-center" style="font-size: 70pt;">Graphy House</p>
           <p class="maintext text-center" style="font-size: 30pt;">フォトグラフィー</p>
           <div class="text-center mt-5">
-            <button type="button" class="btn btn-secondary">Plan a Tour!</button>
+            <a href="ourTours"><button type="button" class="btn btn-secondary">Plan a Tour!</button></a>
             <a href="ourPhotographers"> <button type="button" class="btn btn-outline-secondary">Book a Photographer</button></a>
           </div>
         </div>
