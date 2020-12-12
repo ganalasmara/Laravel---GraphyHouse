@@ -17,7 +17,7 @@
     <p>{{$data->description}}</p>
     <p>Starts from</p>
     <p>{{$data->book_price}}</p>
-    <a href="#">Book a Date</a>
+    <a href="{{ route('checkout',$data->photographer_id) }}">Book a Date</a>
     @foreach($imgList as $img)
         <img src="{{$img->photo}}" alt="">
     @endforeach

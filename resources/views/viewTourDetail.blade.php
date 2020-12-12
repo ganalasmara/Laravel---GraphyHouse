@@ -19,7 +19,7 @@
         <img src="{{$detail->tour_image}}" style="height:400px; width:600px;">
         <h4>{{$detail->description}}</h4>
         <h4>Starts from Rp.{{ $detail->price }}/pax <b></b><h4>
-        <a href="#">Book a Date!</a>
+        <a href="{{ route('tourcheckout',$detail->tour_id) }}">Book a Date!</a>
         <br>
     @endforeach
 </body>

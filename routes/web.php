@@ -25,6 +25,11 @@ Route::get('/ourTours', 'viewTourController@getAllTour')->name('viewTour');
 
 Route::get('/ourTours/{id}', 'viewTourDetailController@getTourDetail')->name('viewTourDetail');
 
+Route::get('/checkout/{id}', 'TransactionController@checkout')->name('checkout');
+Route::post('/checkout/{id}', 'TransactionController@store')->name('addcheckout');
+
+Route::get('/tourcheckout/{id}', 'TransactionController@tourcheckout')->name('tourcheckout');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
