@@ -53,7 +53,9 @@
                     <div class="tour-detail-sec1">
                         <div class="tour-detail-desc">
                             {{$detail->description}} <br>
-                            Lama tour:{{$detail->days}} hari
+                            <b>
+                                Lama tour:{{$detail->days}} hari    
+                            </b>
                         </div>
                         <div>
                             <p class="tour-detail-price">
