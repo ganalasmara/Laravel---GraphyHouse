@@ -34,12 +34,25 @@
                 <li class="nav-item">
                 <a class="nav-link" href="{{ Route('viewTour') }}">Tour List</a>
                 </li>
-                <li class="n  av-item">
-                <a class="nav-link" href="{{ route('login') }}">Login</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}">Register</a>
-                </li>
+                @guest                    
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">Register</a>
+                    </li>
+            @endguest
+            @auth
+                    <li class="nav-item">
+                      <a class="nav-link"href="{{ route('logout') }}" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                      </a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                          @csrf
+                      </form>
+                    </li>
+            @endauth
 
             </ul>
             </div>
@@ -57,7 +70,7 @@
             <div class="col-md-6">
                 <p class="mt-3">{{$data->name}}</p>
                 <p>{{$data->description}}</p>
-                <a href="{{ url($data->portofolio_link)}}"><img src="../Images/ig.svg" style="width:20px; height:20px;"></a>
+                <a href="http://{{ $data->portofolio_link }}"><img src="../Images/ig.svg" style="width:20px; height:20px;"></a>
             </div>
 
             <div class="col-md-2">
@@ -68,8 +81,8 @@
                     <br>
                 @endif
             </div>
-
             </div>
+            
             <div class="row" style="padding-top: 50px">
                 <div class="col">
                 <h1 class="text-center">Portfolio</h1>

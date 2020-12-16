@@ -5,29 +5,82 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
     <title>Checkout</title>
 </head>
 <body>
-    <a href="{{url('/ourPhotographers')}}">Find a Photographer</a>
-    <a href="{{ Route('viewTour') }}">Tour list</a>
-    <a href="{{ route('login') }}">Login</a>
-    <a href="{{ route('register') }}">Register</a>
-    <br>
-    <img src="{{$photographer->photographer_image}}" style="width:300px; height:250px;">
-    <p>{{$photographer->name}}</p>
-    <p>{{$photographer->description}}</p>
-    <p>Starts from</p>
-    <p>{{$photographer->book_price}}</p>
-    <form method="POST" action="">
-    @csrf
-        <span>Work Date: </span>
-        <input type="date" id="workdate" name="workdate" class="@error('workdate') is-invalid @enderror" required value="{{old('workdate')}}">
-        @error('workdate')
-        <span class="invalid-feedback" role="alert">
-            <strong>{{ $message }}</strong>
-        </span>
-        @enderror
-        <button class="bg-dark text-white" type="submit">Check out</button>
-    </form>
+    <div class="bg-photo">
+    <nav class="navbar fixed-top navbar-custom navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand logo" href="/"><img src="/Images/logo.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                <a class="nav-link" href="{{url('/ourPhotographers')}}">Find a Photographer</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ Route('viewTour') }}">Tour List</a>
+                </li>
+                @guest                    
+                <li class="nav-item">
+                <a class="nav-link" href="{{ route('login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ route('register') }}">Register</a>
+                </li>
+        @endguest
+        @auth
+                <li class="nav-item">
+                  <a class="nav-link"href="{{ route('logout') }}" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                  </a>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                      @csrf
+                  </form>
+                </li>
+        @endauth
+
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="padding-top: 100px">
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-thumbnail"src="{{$photographer->photographer_image}}" style="width:200px; height:300px;">
+            </div>
+            <div class="col-md-5">
+                <p>{{$photographer->name}}</p>
+                <p>{{$photographer->description}}</p>
+                <a href="http://{{ $photographer->portofolio_link }}"><img src="../Images/ig.svg" style="width:20px; height:20px;"></a>
+            </div>
+            <div class="col-md-4">
+                <p class="mt-3">Starts from</p>
+                <p>Rp. {{$photographer->book_price}}</p>
+                <form method="POST" action="">
+                @csrf
+                    <span>Work Date: </span>
+                    <input type="date" id="workdate" name="workdate" class="@error('workdate') is-invalid @enderror" required value="{{old('workdate')}}">
+                    @error('workdate')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                    <button class="bg-dark text-white" type="submit">Check out</button>
+                </form>
+            </div>
+    </div>
+    </div>
+</div>
 </body>
 </html>
