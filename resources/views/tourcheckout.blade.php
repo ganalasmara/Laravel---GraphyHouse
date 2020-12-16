@@ -31,10 +31,10 @@
                     <a class="nav-link" href="{{ Route('viewTour') }}">Tour List</a>
                     </li>
                     <li class="n  av-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link" href="{{ route('register') }}">Register</a>
                     </li>
 
                 </ul>
